@@ -29,7 +29,11 @@ must_be_characters = []
 for i in range(1, 7):
 	print("Guess", i, ", available words:", len(utils.words))
 
-	word = utils.choose_word(utils.words)
+	if len(utils.words) < 20 and utils.are_word_similar() and i < 6:
+		print(utils.words)
+		word = utils.choose_word_delete_similar()
+	else:
+		word = utils.choose_word(utils.words)
 
 	print("Word chosen:", word, "with points:", utils.word_point(word))
 
