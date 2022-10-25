@@ -11,8 +11,10 @@ l'AI sarà in grado di indovinare la parola corretta
 
 ## Esecuzione
 
-Nel repository sono presenti 2 eseguibili, uno è il server di gioco che sceglie la parola
-e l'altro è il client che si occupa di indovinare la parola scelta dal server.
+Nel repository sono presenti 3 eseguibili:
+- il server di gioco che sceglie la parola;
+- il client che si occupa di indovinare la parola scelta dal server;
+- una utility che suggerisce all'utente quali parole utilizzare nel gioco reale.
 
 Per avviare il server:
 
@@ -25,5 +27,12 @@ Per avviare il client:
 python3 client.py <language> <word_length>
 ```
 
+Per avviare il suggeritore:
+```bash
+python3 prompter.py <language> <word_length>
+```
+
 Per effettuare più test è possibile lanciare il file `executor.py` senza argomenti, che esegue più volte il client
 scrivendo in un file csv i risultati delle varie esecuzioni
+
+Nel file `base.py` sono contenute tutte le funzioni di utilità utilizzare dai due esecutori.
